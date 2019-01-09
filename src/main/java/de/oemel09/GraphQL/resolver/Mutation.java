@@ -6,6 +6,7 @@ import de.oemel09.GraphQL.model.Book;
 import de.oemel09.GraphQL.repository.AuthorRepository;
 import de.oemel09.GraphQL.repository.BookRepository;
 import lombok.AllArgsConstructor;
+import org.springframework.dao.DataIntegrityViolationException;
 
 import java.util.Optional;
 
@@ -40,6 +41,16 @@ public class Mutation implements GraphQLMutationResolver {
     public boolean deleteBook(Long id) {
         bookRepository.deleteById(id);
         return true;
+    }
+
+    public boolean deleteAuthor(Long id) {
+        try {
+            authorRepository.deleteById(id);
+            return true;
+        } catch (DataIntegrityViolationException e) {
+            System.out.println("Failed to delete author, there is still a book saved written by this author!");
+            return false;
+        }
     }
 
     public Book updateBookPageCount(Long id, Integer pageCount) {
