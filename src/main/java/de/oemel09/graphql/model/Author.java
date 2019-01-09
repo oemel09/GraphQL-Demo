@@ -1,4 +1,4 @@
-package de.oemel09.GraphQL.model;
+package de.oemel09.graphql.model;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

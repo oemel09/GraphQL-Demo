@@ -1,12 +1,12 @@
-package de.oemel09.GraphQL;
+package de.oemel09.graphql;
 
-import de.oemel09.GraphQL.model.Author;
-import de.oemel09.GraphQL.model.Book;
-import de.oemel09.GraphQL.repository.AuthorRepository;
-import de.oemel09.GraphQL.repository.BookRepository;
-import de.oemel09.GraphQL.resolver.BookResolver;
-import de.oemel09.GraphQL.resolver.Mutation;
-import de.oemel09.GraphQL.resolver.Query;
+import de.oemel09.graphql.model.Author;
+import de.oemel09.graphql.model.Book;
+import de.oemel09.graphql.repository.AuthorRepository;
+import de.oemel09.graphql.repository.BookRepository;
+import de.oemel09.graphql.resolver.BookResolver;
+import de.oemel09.graphql.resolver.Mutation;
+import de.oemel09.graphql.resolver.Query;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

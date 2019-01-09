@@ -1,10 +1,10 @@
-package de.oemel09.GraphQL.resolver;
+package de.oemel09.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLMutationResolver;
-import de.oemel09.GraphQL.model.Author;
-import de.oemel09.GraphQL.model.Book;
-import de.oemel09.GraphQL.repository.AuthorRepository;
-import de.oemel09.GraphQL.repository.BookRepository;
+import de.oemel09.graphql.model.Author;
+import de.oemel09.graphql.model.Book;
+import de.oemel09.graphql.repository.AuthorRepository;
+import de.oemel09.graphql.repository.BookRepository;
 import lombok.AllArgsConstructor;
 
 import java.util.Optional;

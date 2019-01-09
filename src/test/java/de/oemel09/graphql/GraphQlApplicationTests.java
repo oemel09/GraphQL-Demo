@@ -1,4 +1,4 @@
-package de.oemel09.GraphQL;
+package de.oemel09.graphql;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

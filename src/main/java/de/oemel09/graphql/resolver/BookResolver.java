@@ -1,9 +1,9 @@
-package de.oemel09.GraphQL.resolver;
+package de.oemel09.graphql.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLResolver;
-import de.oemel09.GraphQL.model.Author;
-import de.oemel09.GraphQL.model.Book;
-import de.oemel09.GraphQL.repository.AuthorRepository;
+import de.oemel09.graphql.model.Author;
+import de.oemel09.graphql.model.Book;
+import de.oemel09.graphql.repository.AuthorRepository;
 
 import java.util.Optional;
 
