@@ -1,0 +1,37 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.1.RELEASE'
+	}
+	repositories {
+		jcenter()
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'de.oemel09'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+	implementation('org.springframework.boot:spring-boot-starter-web')
+
+	compile group: 'com.graphql-java', name: 'graphql-spring-boot-starter', version: '5.0.2'
+	compile group: 'com.graphql-java', name: 'graphiql-spring-boot-starter', version: '5.0.2'
+	compile group: 'com.graphql-java', name: 'graphql-java-tools', version: '5.2.4'
+
+	runtimeOnly('com.h2database:h2')
+	compileOnly('org.projectlombok:lombok:1.18.4')
+	testImplementation('org.springframework.boot:spring-boot-starter-test')
+}

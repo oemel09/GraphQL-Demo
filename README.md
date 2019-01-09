@@ -56,7 +56,7 @@ mutation {
 }
 ```
 
-H2 is used as a in-memory database. here you can query the DB directly:  
+H2 is used as a in-memory database. Here you can query the DB directly:  
 http://localhost:8080/h2-console/login.jsp  
 Use this JDBC URL: `jdbc:h2:mem:testdb`  
 And this username: `sa`  
