@@ -4,9 +4,6 @@ import de.oemel09.graphql.model.Author;
 import de.oemel09.graphql.model.Book;
 import de.oemel09.graphql.repository.AuthorRepository;
 import de.oemel09.graphql.repository.BookRepository;
-import de.oemel09.graphql.resolver.BookResolver;
-import de.oemel09.graphql.resolver.Mutation;
-import de.oemel09.graphql.resolver.Query;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,21 +17,6 @@ public class GraphQlApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(GraphQlApplication.class, args);
-    }
-
-    @Bean
-    public BookResolver authorResolver(AuthorRepository authorRepository) {
-        return new BookResolver(authorRepository);
-    }
-
-    @Bean
-    public Query query(AuthorRepository authorRepository, BookRepository bookRepository) {
-        return new Query(authorRepository, bookRepository);
-    }
-
-    @Bean
-    public Mutation mutation(AuthorRepository authorRepository, BookRepository bookRepository) {
-        return new Mutation(authorRepository, bookRepository);
     }
 
     @Bean

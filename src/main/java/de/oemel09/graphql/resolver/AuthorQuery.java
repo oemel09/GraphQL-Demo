@@ -5,27 +5,19 @@ import de.oemel09.graphql.model.Author;
 import de.oemel09.graphql.model.Book;
 import de.oemel09.graphql.repository.AuthorRepository;
 import de.oemel09.graphql.repository.BookRepository;
+import org.springframework.stereotype.Component;
 
-public class Query implements GraphQLQueryResolver {
+@Component
+public class AuthorQuery implements GraphQLQueryResolver {
 
-    private BookRepository bookRepository;
     private AuthorRepository authorRepository;
 
-    public Query(AuthorRepository authorRepository, BookRepository bookRepository) {
+    public AuthorQuery(AuthorRepository authorRepository) {
         this.authorRepository = authorRepository;
-        this.bookRepository = bookRepository;
-    }
-
-    public Iterable<Book> findAllBooks() {
-        return bookRepository.findAll();
     }
 
     public Iterable<Author> findAllAuthors() {
         return authorRepository.findAll();
-    }
-
-    public long countBooks() {
-        return bookRepository.count();
     }
 
     public long countAuthors() {
