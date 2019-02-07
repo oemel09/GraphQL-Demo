@@ -16,4 +16,5 @@ type Query {
 
 type Mutation {
     newAuthor(firstName: String!, lastName: String!) : Author!
+    deleteAuthor(id: ID!) : Boolean
 }
