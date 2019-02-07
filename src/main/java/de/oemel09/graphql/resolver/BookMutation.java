@@ -6,7 +6,6 @@ import de.oemel09.graphql.model.Book;
 import de.oemel09.graphql.repository.BookRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Component;
-
 import java.util.Optional;
 
 @AllArgsConstructor
